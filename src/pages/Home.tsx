@@ -52,7 +52,10 @@ const Home = () => {
 
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white space-y-6 animate-fade-in">
-            <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold leading-tight">
+            <AnimatedText
+              as="h1"
+              className="text-5xl md:text-6xl font-bold leading-tight"
+            >
               Quality Service for Your Two-Wheeler
             </AnimatedText>
             <AnimatedText as="p" className="text-xl text-gray-200" delay={0.1}>
@@ -88,7 +91,12 @@ const Home = () => {
             {/* Quick Highlights */}
             <div className="flex flex-wrap gap-6 pt-6">
               {features.map((feature, index) => (
-                <AnimatedText key={index} as="div" className="flex items-center space-x-2" delay={0.2 + index * 0.1}>
+                <AnimatedText
+                  key={index}
+                  as="div"
+                  className="flex items-center space-x-2"
+                  delay={0.2 + index * 0.1}
+                >
                   <feature.icon className="h-5 w-5 text-accent" />
                   <span className="text-sm font-medium">{feature.text}</span>
                 </AnimatedText>
@@ -102,10 +110,17 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Choose BikeService?
+            <AnimatedText
+              as="h2"
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
+              Why Choose Star Service?
             </AnimatedText>
-            <AnimatedText as="p" className="text-muted-foreground max-w-2xl mx-auto" delay={0.1}>
+            <AnimatedText
+              as="p"
+              className="text-muted-foreground max-w-2xl mx-auto"
+              delay={0.1}
+            >
               We're committed to providing the best service for your two-wheeler
             </AnimatedText>
           </div>
@@ -138,10 +153,18 @@ const Home = () => {
                 <div className="bg-gradient-to-br from-primary/10 to-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="h-7 w-7 text-primary" />
                 </div>
-                <AnimatedText as="h3" className="text-xl font-bold mb-3 text-foreground" delay={index * 0.1}>
+                <AnimatedText
+                  as="h3"
+                  className="text-xl font-bold mb-3 text-foreground"
+                  delay={index * 0.1}
+                >
                   {item.title}
                 </AnimatedText>
-                <AnimatedText as="p" className="text-muted-foreground leading-relaxed" delay={index * 0.1 + 0.1}>
+                <AnimatedText
+                  as="p"
+                  className="text-muted-foreground leading-relaxed"
+                  delay={index * 0.1 + 0.1}
+                >
                   {item.description}
                 </AnimatedText>
               </Card>
@@ -154,7 +177,10 @@ const Home = () => {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <AnimatedText
+              as="h2"
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
               Popular Services
             </AnimatedText>
             <AnimatedText as="p" className="text-muted-foreground" delay={0.1}>
@@ -176,7 +202,11 @@ const Home = () => {
                 <div className="bg-gradient-to-br from-accent/10 to-accent/5 w-18 h-18 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-9 w-9 text-accent" />
                 </div>
-                <AnimatedText as="h3" className="font-bold text-foreground" delay={index * 0.1}>
+                <AnimatedText
+                  as="h3"
+                  className="font-bold text-foreground"
+                  delay={index * 0.1}
+                >
                   {service.name}
                 </AnimatedText>
               </Card>
@@ -195,7 +225,10 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <AnimatedText
+              as="h2"
+              className="text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
               What Our Customers Say
             </AnimatedText>
             <AnimatedText as="p" className="text-muted-foreground" delay={0.1}>
@@ -220,10 +253,18 @@ const Home = () => {
                     </svg>
                   ))}
                 </div>
-                <AnimatedText as="p" className="text-muted-foreground mb-5 leading-relaxed italic" delay={index * 0.1}>
+                <AnimatedText
+                  as="p"
+                  className="text-muted-foreground mb-5 leading-relaxed italic"
+                  delay={index * 0.1}
+                >
                   "{testimonial.text}"
                 </AnimatedText>
-                <AnimatedText as="p" className="font-bold text-foreground" delay={index * 0.1 + 0.1}>
+                <AnimatedText
+                  as="p"
+                  className="font-bold text-foreground"
+                  delay={index * 0.1 + 0.1}
+                >
                   - {testimonial.name}
                 </AnimatedText>
               </Card>
