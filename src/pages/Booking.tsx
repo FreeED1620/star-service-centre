@@ -75,7 +75,7 @@ const Booking = () => {
     }
 
     // --- WhatsApp Integration ---
-    const companyNumber = "9008079135"; // Replace with your WhatsApp number (no + or spaces)
+    const companyNumber = "+91 9008079135"; // Replace with your WhatsApp number (no + or spaces)
 
     // Construct the message
     let message = `*Bike Service Booking Request*\n\n`;
