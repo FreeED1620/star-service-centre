@@ -8,6 +8,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
+import AnimatedText from "@/components/AnimatedText";
 
 const Footer = () => {
   return (
@@ -21,18 +22,18 @@ const Footer = () => {
                 <Wrench className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <div className="font-bold text-lg">Star Service Centre</div>
+                <AnimatedText as="div" className="font-bold text-lg">Star Service Centre</AnimatedText>
               </div>
             </div>
-            <p className="text-sm text-gray-400">
+            <AnimatedText as="p" className="text-sm text-gray-400" delay={0.1}>
               Your trusted partner for two-wheeler service and maintenance.
               Quality service, every time.
-            </p>
+            </AnimatedText>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <AnimatedText as="h3" className="font-semibold text-lg mb-4" delay={0.1}>Quick Links</AnimatedText>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -71,7 +72,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Our Services</h3>
+            <AnimatedText as="h3" className="font-semibold text-lg mb-4" delay={0.2}>Our Services</AnimatedText>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>General Service</li>
               <li>Engine Repair</li>
@@ -84,7 +85,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <AnimatedText as="h3" className="font-semibold text-lg mb-4" delay={0.3}>Contact Us</AnimatedText>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start space-x-2">
                 <Phone className="h-4 w-4 mt-1 flex-shrink-0 text-accent" />
@@ -123,7 +124,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <p>
+          <AnimatedText as="p">
             &copy; {new Date().getFullYear()}Star Service Center. Powered by
             &copy; {new Date().getFullYear()}{" "}
             <a
@@ -133,7 +134,7 @@ const Footer = () => {
               Secyra.co
             </a>
             . All rights reserved.
-          </p>
+          </AnimatedText>
         </div>
       </div>
     </footer>

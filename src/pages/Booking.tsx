@@ -20,6 +20,7 @@ import {
 import { CalendarIcon, Clock } from "lucide-react";
 import { format } from "date-fns";
 import { toast } from "sonner";
+import AnimatedText from "@/components/AnimatedText";
 
 const Booking = () => {
   const [date, setDate] = useState<Date>();
@@ -75,7 +76,7 @@ const Booking = () => {
     }
 
     // --- WhatsApp Integration ---
-    const companyNumber = "+91 9008079135"; // Replace with your WhatsApp number (no + or spaces)
+    const companyNumber = "+919008079135"; // Replace with your WhatsApp number (no + or spaces)
 
     // Construct the message
     let message = `*Bike Service Booking Request*\n\n`;
@@ -123,12 +124,16 @@ const Booking = () => {
       {/* Hero Section */}
       <section className="bg-automotive-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <AnimatedText as="h1" className="text-4xl md:text-5xl font-bold mb-4">
             Book Your Service
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            delay={0.1}
+          >
             Schedule an appointment for your two-wheeler service
-          </p>
+          </AnimatedText>
         </div>
       </section>
 
@@ -140,9 +145,12 @@ const Booking = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Personal Information */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-semibold text-foreground">
+                  <AnimatedText
+                    as="h2"
+                    className="text-2xl font-semibold text-foreground"
+                  >
                     Personal Information
-                  </h2>
+                  </AnimatedText>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
@@ -163,7 +171,7 @@ const Booking = () => {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+9198765 43210"
                         value={formData.phone}
                         onChange={(e) =>
                           handleInputChange("phone", e.target.value)
@@ -201,9 +209,12 @@ const Booking = () => {
 
                 {/* Service Details */}
                 <div className="space-y-4 pt-6 border-t">
-                  <h2 className="text-2xl font-semibold text-foreground">
+                  <AnimatedText
+                    as="h2"
+                    className="text-2xl font-semibold text-foreground"
+                  >
                     Service Details
-                  </h2>
+                  </AnimatedText>
 
                   <div className="space-y-2">
                     <Label htmlFor="serviceType">Service Type *</Label>
@@ -299,10 +310,13 @@ const Booking = () => {
                   <Button type="submit" size="lg" className="w-full">
                     Submit Booking Request
                   </Button>
-                  <p className="text-sm text-muted-foreground text-center mt-4">
+                  <AnimatedText
+                    as="p"
+                    className="text-sm text-muted-foreground text-center mt-4"
+                  >
                     * Required fields. We'll contact you to confirm your
                     appointment.
-                  </p>
+                  </AnimatedText>
                 </div>
               </form>
             </Card>

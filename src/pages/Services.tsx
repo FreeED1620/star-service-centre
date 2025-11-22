@@ -12,6 +12,7 @@ import {
   Truck,
   Settings,
 } from "lucide-react";
+import AnimatedText from "@/components/AnimatedText";
 
 const Services = () => {
   const services = [
@@ -84,12 +85,12 @@ const Services = () => {
       {/* Hero Section */}
       <section className="bg-automotive-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <AnimatedText as="h1" className="text-4xl md:text-5xl font-bold mb-4">
             Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          </AnimatedText>
+          <AnimatedText as="p" className="text-xl text-gray-300 max-w-2xl mx-auto" delay={0.1}>
             Comprehensive two-wheeler care from experts you can trust
-          </p>
+          </AnimatedText>
         </div>
       </section>
 
@@ -105,16 +106,16 @@ const Services = () => {
                 <div className="bg-gradient-to-br from-primary/10 to-accent/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <AnimatedText as="h3" className="text-xl font-bold text-foreground mb-3" delay={index * 0.05}>
                   {service.title}
-                </h3>
-                <p className="text-muted-foreground mb-5 text-sm leading-relaxed">
+                </AnimatedText>
+                <AnimatedText as="p" className="text-muted-foreground mb-5 text-sm leading-relaxed" delay={index * 0.05 + 0.05}>
                   {service.description}
-                </p>
+                </AnimatedText>
                 <div className="flex items-center justify-between pt-5 border-t border-border/30">
-                  <span className="text-accent font-bold text-lg">
+                  <AnimatedText as="span" className="text-accent font-bold text-lg" delay={index * 0.05 + 0.1}>
                     {service.price}
-                  </span>
+                  </AnimatedText>
                 </div>
               </Card>
             ))}
@@ -126,13 +127,13 @@ const Services = () => {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <AnimatedText as="h2" className="text-3xl font-bold text-foreground mb-4">
               Our Service Process
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            </AnimatedText>
+            <AnimatedText as="p" className="text-muted-foreground max-w-2xl mx-auto" delay={0.1}>
               Simple, transparent, and efficient process for all your service
               needs
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="flex flex-wrap justify-center gap-8">
@@ -155,15 +156,15 @@ const Services = () => {
               },
             ].map((process, index) => (
               <Card key={index} className="p-6 text-center">
-                <div className="text-4xl font-bold text-accent mb-3">
+                <AnimatedText as="div" className="text-4xl font-bold text-accent mb-3" delay={index * 0.1}>
                   {process.step}
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                </AnimatedText>
+                <AnimatedText as="h3" className="text-lg font-semibold text-foreground mb-2" delay={index * 0.1 + 0.1}>
                   {process.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
+                </AnimatedText>
+                <AnimatedText as="p" className="text-sm text-muted-foreground" delay={index * 0.1 + 0.15}>
                   {process.description}
-                </p>
+                </AnimatedText>
               </Card>
             ))}
           </div>
@@ -175,9 +176,9 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
+              <AnimatedText as="h2" className="text-3xl font-bold text-foreground mb-6">
                 Why Choose Our Services?
-              </h2>
+              </AnimatedText>
               <ul className="space-y-4">
                 {[
                   "Certified and experienced mechanics",
@@ -186,7 +187,7 @@ const Services = () => {
                   "Fast turnaround time",
                   "Customer-first approach",
                 ].map((point, index) => (
-                  <li key={index} className="flex items-start space-x-3">
+                  <AnimatedText key={index} as="li" className="flex items-start space-x-3" delay={index * 0.1}>
                     <div className="bg-accent/10 rounded-full p-1 mt-1">
                       <svg
                         className="w-4 h-4 text-accent"
@@ -203,16 +204,16 @@ const Services = () => {
                       </svg>
                     </div>
                     <span className="text-muted-foreground">{point}</span>
-                  </li>
+                  </AnimatedText>
                 ))}
               </ul>
             </div>
             <Card className="p-8 bg-primary text-primary-foreground">
-              <h3 className="text-2xl font-bold mb-4">Service Guarantee</h3>
-              <p className="mb-6">
+              <AnimatedText as="h3" className="text-2xl font-bold mb-4">Service Guarantee</AnimatedText>
+              <AnimatedText as="p" className="mb-6" delay={0.1}>
                 Your satisfaction and safety are our top priorities. We treat
                 every motorcycle like our own, so you can ride with confidence.
-              </p>
+              </AnimatedText>
               <Button
                 asChild
                 variant="secondary"
@@ -229,12 +230,12 @@ const Services = () => {
       {/* CTA Section */}
       <section className="py-20 bg-accent text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <AnimatedText as="h2" className="text-3xl font-bold mb-4">
             Need Expert Service for Your Bike?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
+          </AnimatedText>
+          <AnimatedText as="p" className="text-xl mb-8 opacity-90" delay={0.1}>
             Book an appointment today and experience professional service
-          </p>
+          </AnimatedText>
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               asChild

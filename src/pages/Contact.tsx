@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
+import AnimatedText from "@/components/AnimatedText";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -74,12 +75,16 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-automotive-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
+          <AnimatedText as="h1" className="text-4xl md:text-5xl font-bold mb-4">
             Contact Us
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            delay={0.1}
+          >
             Get in touch with us for any queries or support
-          </p>
+          </AnimatedText>
         </div>
       </section>
 
@@ -95,11 +100,20 @@ const Contact = () => {
                 <div className="bg-primary/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                   <info.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">
+                <AnimatedText
+                  as="h3"
+                  className="font-semibold text-foreground mb-2"
+                  delay={index * 0.1}
+                >
                   {info.title}
-                </h3>
+                </AnimatedText>
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-sm text-muted-foreground">
+                  <AnimatedText
+                    key={idx}
+                    as="p"
+                    className="text-sm text-muted-foreground"
+                    delay={index * 0.1 + idx * 0.05}
+                  >
                     {info.link && idx === 0 ? (
                       <a
                         href={info.link}
@@ -118,7 +132,7 @@ const Contact = () => {
                     ) : (
                       detail
                     )}
-                  </p>
+                  </AnimatedText>
                 ))}
               </Card>
             ))}
@@ -132,9 +146,12 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
+              <AnimatedText
+                as="h2"
+                className="text-3xl font-bold text-foreground mb-6"
+              >
                 Send Us a Message
-              </h2>
+              </AnimatedText>
               <Card className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
@@ -155,7 +172,7 @@ const Contact = () => {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+9198765 43210"
                         value={formData.phone}
                         onChange={(e) =>
                           handleInputChange("phone", e.target.value)
@@ -215,9 +232,12 @@ const Contact = () => {
             {/* Map & Additional Info */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-foreground mb-6">
+                <AnimatedText
+                  as="h2"
+                  className="text-3xl font-bold text-foreground mb-6"
+                >
                   Find Us Here
-                </h2>
+                </AnimatedText>
                 <Card className="overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.074595670326!2d75.921307!3d14.025974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba5ba739eb060d%3A0xf1e810596b08ae95!2sStar%20Sarvice%20centar!5e0!3m2!1sen!2sin!4v1732252130000
@@ -234,10 +254,12 @@ const Contact = () => {
               </div>
 
               <Card className="p-6 bg-primary text-primary-foreground">
-                <h3 className="text-xl font-semibold mb-4">Quick Response</h3>
-                <p className="mb-4">
+                <AnimatedText as="h3" className="text-xl font-semibold mb-4">
+                  Quick Response
+                </AnimatedText>
+                <AnimatedText as="p" className="mb-4" delay={0.1}>
                   Need immediate assistance? We're here to help!
-                </p>
+                </AnimatedText>
                 <div className="space-y-3">
                   <Button
                     asChild

@@ -10,6 +10,7 @@ import {
   Shield,
 } from "lucide-react";
 import heroImage from "@/assets/hero-bike-service.jpg";
+import AnimatedText from "@/components/AnimatedText";
 
 const Home = () => {
   const features = [
@@ -51,13 +52,13 @@ const Home = () => {
 
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white space-y-6 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            <AnimatedText as="h1" className="text-5xl md:text-6xl font-bold leading-tight">
               Quality Service for Your Two-Wheeler
-            </h1>
-            <p className="text-xl text-gray-200">
+            </AnimatedText>
+            <AnimatedText as="p" className="text-xl text-gray-200" delay={0.1}>
               Expert mechanics, genuine parts, and reliable service you can
               trust
-            </p>
+            </AnimatedText>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
@@ -87,10 +88,10 @@ const Home = () => {
             {/* Quick Highlights */}
             <div className="flex flex-wrap gap-6 pt-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-2">
+                <AnimatedText key={index} as="div" className="flex items-center space-x-2" delay={0.2 + index * 0.1}>
                   <feature.icon className="h-5 w-5 text-accent" />
                   <span className="text-sm font-medium">{feature.text}</span>
-                </div>
+                </AnimatedText>
               ))}
             </div>
           </div>
@@ -101,12 +102,12 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Why Choose BikeService?
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            </AnimatedText>
+            <AnimatedText as="p" className="text-muted-foreground max-w-2xl mx-auto" delay={0.1}>
               We're committed to providing the best service for your two-wheeler
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -137,12 +138,12 @@ const Home = () => {
                 <div className="bg-gradient-to-br from-primary/10 to-accent/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">
+                <AnimatedText as="h3" className="text-xl font-bold mb-3 text-foreground" delay={index * 0.1}>
                   {item.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                </AnimatedText>
+                <AnimatedText as="p" className="text-muted-foreground leading-relaxed" delay={index * 0.1 + 0.1}>
                   {item.description}
-                </p>
+                </AnimatedText>
               </Card>
             ))}
           </div>
@@ -153,12 +154,12 @@ const Home = () => {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Popular Services
-            </h2>
-            <p className="text-muted-foreground">
+            </AnimatedText>
+            <AnimatedText as="p" className="text-muted-foreground" delay={0.1}>
               Comprehensive care for your two-wheeler
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
@@ -175,7 +176,9 @@ const Home = () => {
                 <div className="bg-gradient-to-br from-accent/10 to-accent/5 w-18 h-18 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-9 w-9 text-accent" />
                 </div>
-                <h3 className="font-bold text-foreground">{service.name}</h3>
+                <AnimatedText as="h3" className="font-bold text-foreground" delay={index * 0.1}>
+                  {service.name}
+                </AnimatedText>
               </Card>
             ))}
           </div>
@@ -192,12 +195,12 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               What Our Customers Say
-            </h2>
-            <p className="text-muted-foreground">
+            </AnimatedText>
+            <AnimatedText as="p" className="text-muted-foreground" delay={0.1}>
               Don't just take our word for it
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -217,12 +220,12 @@ const Home = () => {
                     </svg>
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-5 leading-relaxed italic">
+                <AnimatedText as="p" className="text-muted-foreground mb-5 leading-relaxed italic" delay={index * 0.1}>
                   "{testimonial.text}"
-                </p>
-                <p className="font-bold text-foreground">
+                </AnimatedText>
+                <AnimatedText as="p" className="font-bold text-foreground" delay={index * 0.1 + 0.1}>
                   - {testimonial.name}
-                </p>
+                </AnimatedText>
               </Card>
             ))}
           </div>
@@ -232,12 +235,12 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <AnimatedText as="h2" className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Service Your Bike?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
+          </AnimatedText>
+          <AnimatedText as="p" className="text-xl mb-8 opacity-90" delay={0.1}>
             Book your appointment today and experience quality service
-          </p>
+          </AnimatedText>
           <Button
             asChild
             size="lg"
