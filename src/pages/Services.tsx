@@ -72,12 +72,6 @@ const Services = () => {
         "Tyre replacement, puncture repair, wheel balancing and alignment",
       price: "₹99 onwards",
     },
-    {
-      icon: Truck,
-      title: "Pickup & Drop",
-      description: "Free doorstep pickup and drop service within 10 km radius",
-      price: "Free*",
-    },
   ];
 
   return (
@@ -88,7 +82,11 @@ const Services = () => {
           <AnimatedText as="h1" className="text-4xl md:text-5xl font-bold mb-4">
             Our Services
           </AnimatedText>
-          <AnimatedText as="p" className="text-xl text-gray-300 max-w-2xl mx-auto" delay={0.1}>
+          <AnimatedText
+            as="p"
+            className="text-xl text-gray-300 max-w-2xl mx-auto"
+            delay={0.1}
+          >
             Comprehensive two-wheeler care from experts you can trust
           </AnimatedText>
         </div>
@@ -106,14 +104,26 @@ const Services = () => {
                 <div className="bg-gradient-to-br from-primary/10 to-accent/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-8 w-8 text-primary" />
                 </div>
-                <AnimatedText as="h3" className="text-xl font-bold text-foreground mb-3" delay={index * 0.05}>
+                <AnimatedText
+                  as="h3"
+                  className="text-xl font-bold text-foreground mb-3"
+                  delay={index * 0.05}
+                >
                   {service.title}
                 </AnimatedText>
-                <AnimatedText as="p" className="text-muted-foreground mb-5 text-sm leading-relaxed" delay={index * 0.05 + 0.05}>
+                <AnimatedText
+                  as="p"
+                  className="text-muted-foreground mb-5 text-sm leading-relaxed"
+                  delay={index * 0.05 + 0.05}
+                >
                   {service.description}
                 </AnimatedText>
                 <div className="flex items-center justify-between pt-5 border-t border-border/30">
-                  <AnimatedText as="span" className="text-accent font-bold text-lg" delay={index * 0.05 + 0.1}>
+                  <AnimatedText
+                    as="span"
+                    className="text-accent font-bold text-lg"
+                    delay={index * 0.05 + 0.1}
+                  >
                     {service.price}
                   </AnimatedText>
                 </div>
@@ -127,10 +137,17 @@ const Services = () => {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText as="h2" className="text-3xl font-bold text-foreground mb-4">
+            <AnimatedText
+              as="h2"
+              className="text-3xl font-bold text-foreground mb-4"
+            >
               Our Service Process
             </AnimatedText>
-            <AnimatedText as="p" className="text-muted-foreground max-w-2xl mx-auto" delay={0.1}>
+            <AnimatedText
+              as="p"
+              className="text-muted-foreground max-w-2xl mx-auto"
+              delay={0.1}
+            >
               Simple, transparent, and efficient process for all your service
               needs
             </AnimatedText>
@@ -156,13 +173,25 @@ const Services = () => {
               },
             ].map((process, index) => (
               <Card key={index} className="p-6 text-center">
-                <AnimatedText as="div" className="text-4xl font-bold text-accent mb-3" delay={index * 0.1}>
+                <AnimatedText
+                  as="div"
+                  className="text-4xl font-bold text-accent mb-3"
+                  delay={index * 0.1}
+                >
                   {process.step}
                 </AnimatedText>
-                <AnimatedText as="h3" className="text-lg font-semibold text-foreground mb-2" delay={index * 0.1 + 0.1}>
+                <AnimatedText
+                  as="h3"
+                  className="text-lg font-semibold text-foreground mb-2"
+                  delay={index * 0.1 + 0.1}
+                >
                   {process.title}
                 </AnimatedText>
-                <AnimatedText as="p" className="text-sm text-muted-foreground" delay={index * 0.1 + 0.15}>
+                <AnimatedText
+                  as="p"
+                  className="text-sm text-muted-foreground"
+                  delay={index * 0.1 + 0.15}
+                >
                   {process.description}
                 </AnimatedText>
               </Card>
@@ -176,7 +205,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <AnimatedText as="h2" className="text-3xl font-bold text-foreground mb-6">
+              <AnimatedText
+                as="h2"
+                className="text-3xl font-bold text-foreground mb-6"
+              >
                 Why Choose Our Services?
               </AnimatedText>
               <ul className="space-y-4">
@@ -187,7 +219,12 @@ const Services = () => {
                   "Fast turnaround time",
                   "Customer-first approach",
                 ].map((point, index) => (
-                  <AnimatedText key={index} as="li" className="flex items-start space-x-3" delay={index * 0.1}>
+                  <AnimatedText
+                    key={index}
+                    as="li"
+                    className="flex items-start space-x-3"
+                    delay={index * 0.1}
+                  >
                     <div className="bg-accent/10 rounded-full p-1 mt-1">
                       <svg
                         className="w-4 h-4 text-accent"
@@ -209,7 +246,9 @@ const Services = () => {
               </ul>
             </div>
             <Card className="p-8 bg-primary text-primary-foreground">
-              <AnimatedText as="h3" className="text-2xl font-bold mb-4">Service Guarantee</AnimatedText>
+              <AnimatedText as="h3" className="text-2xl font-bold mb-4">
+                Service Guarantee
+              </AnimatedText>
               <AnimatedText as="p" className="mb-6" delay={0.1}>
                 Your satisfaction and safety are our top priorities. We treat
                 every motorcycle like our own, so you can ride with confidence.
