@@ -22,7 +22,9 @@ const Footer = () => {
                 <Wrench className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <AnimatedText as="div" className="font-bold text-lg">Star Service Centre</AnimatedText>
+                <AnimatedText as="div" className="font-bold text-lg">
+                  Star Service Centre
+                </AnimatedText>
               </div>
             </div>
             <AnimatedText as="p" className="text-sm text-gray-400" delay={0.1}>
@@ -33,7 +35,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <AnimatedText as="h3" className="font-semibold text-lg mb-4" delay={0.1}>Quick Links</AnimatedText>
+            <AnimatedText
+              as="h3"
+              className="font-semibold text-lg mb-4"
+              delay={0.1}
+            >
+              Quick Links
+            </AnimatedText>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -72,7 +80,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <AnimatedText as="h3" className="font-semibold text-lg mb-4" delay={0.2}>Our Services</AnimatedText>
+            <AnimatedText
+              as="h3"
+              className="font-semibold text-lg mb-4"
+              delay={0.2}
+            >
+              Our Services
+            </AnimatedText>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>General Service</li>
               <li>Engine Repair</li>
@@ -85,7 +99,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <AnimatedText as="h3" className="font-semibold text-lg mb-4" delay={0.3}>Contact Us</AnimatedText>
+            <AnimatedText
+              as="h3"
+              className="font-semibold text-lg mb-4"
+              delay={0.3}
+            >
+              Contact Us
+            </AnimatedText>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start space-x-2">
                 <Phone className="h-4 w-4 mt-1 flex-shrink-0 text-accent" />
@@ -123,9 +143,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-400">
-          <AnimatedText as="p">
-            &copy; {new Date().getFullYear()}Star Service Center. Powered by
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-white">
+          <p className="opacity-100 translate-y-0 transition-none">
+            &copy; {new Date().getFullYear()} Star Service Center. Powered by{" "}
             &copy; {new Date().getFullYear()}{" "}
             <a
               href="https://www.instagram.com/secyra.co"
@@ -134,7 +154,7 @@ const Footer = () => {
               Secyra.co
             </a>
             . All rights reserved.
-          </AnimatedText>
+          </p>
         </div>
       </div>
     </footer>
