@@ -8,6 +8,14 @@ import {
   Wrench,
   Clock,
   Shield,
+  Droplets,
+  Zap,
+  Disc,
+  Sparkles,
+  Battery,
+  Circle,
+  Truck,
+  Settings,
 } from "lucide-react";
 import heroImage from "@/assets/hero-bike-service.jpg";
 import AnimatedText from "@/components/AnimatedText";
@@ -191,15 +199,15 @@ const Home = () => {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { name: "General Service", icon: Wrench },
-              { name: "Engine Repair", icon: Wrench },
-              { name: "Oil Change", icon: Wrench },
-              { name: "Brake Service", icon: Wrench },
+              { name: "Engine Repair", icon: Settings },
+              { name: "Oil Change", icon: Droplets },
+              { name: "Brake Service", icon: Disc },
             ].map((service, index) => (
               <Card
                 key={index}
                 className="p-7 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group border-border/30"
               >
-                <div className="bg-gradient-to-br from-accent/10 to-accent/5 w-18 h-18 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-br from-accent/10 to-accent/5 w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="h-9 w-9 text-accent" />
                 </div>
                 <AnimatedText

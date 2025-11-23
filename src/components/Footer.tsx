@@ -153,7 +153,7 @@ const Footer = () => {
             >
               Secyra.co
             </a>
-            . All rights reserved.
+            &nbsp;| All rights reserved.
           </p>
         </div>
       </div>
