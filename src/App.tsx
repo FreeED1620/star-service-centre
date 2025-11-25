@@ -11,6 +11,7 @@ import Services from "./pages/Services";
 import Booking from "./pages/Booking";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Arecanut from "./pages/Arecanut";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/booking" element={<Booking />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/arecanut" element={<Arecanut />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

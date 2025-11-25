@@ -17,8 +17,9 @@ import {
   Truck,
   Settings,
 } from "lucide-react";
-import heroImage from "@/assets/hero-bike-service.jpg";
 import AnimatedText from "@/components/AnimatedText";
+import vid1 from "@/assets/vid1.mp4";
+import vid2 from "@/assets/vid2.mp4";
 
 const Home = () => {
   const features = [
@@ -229,7 +230,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Company Showcase */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -237,47 +238,58 @@ const Home = () => {
               as="h2"
               className="text-3xl md:text-4xl font-bold text-foreground mb-4"
             >
-              What Our Customers Say
+              See Us in Action
             </AnimatedText>
             <AnimatedText as="p" className="text-muted-foreground" delay={0.1}>
-              Don't just take our word for it
+              A glimpse into our service center and team
             </AnimatedText>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="p-8 hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-card to-muted/20"
+          {/* Video Gallery */}
+          <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Video 1 */}
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <video
+                src="/videos/vid1.mp4"
+                controls
+                playsInline
+                className="w-full max-h-[600px] object-contain"
               >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 text-accent fill-current"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-                </div>
-                <AnimatedText
-                  as="p"
-                  className="text-muted-foreground mb-5 leading-relaxed italic"
-                  delay={index * 0.1}
-                >
-                  "{testimonial.text}"
-                </AnimatedText>
-                <AnimatedText
-                  as="p"
-                  className="font-bold text-foreground"
-                  delay={index * 0.1 + 0.1}
-                >
-                  - {testimonial.name}
-                </AnimatedText>
-              </Card>
-            ))}
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            {/* Video 2 */}
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <video
+                src="/videos/vid2.mp4"
+                controls
+                playsInline
+                className="w-full max-h-[600px] object-contain"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
+
+          {/* Photo Gallery
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <img
+              src="https://images.pexels.com/photos/1103/bike-service.jpg"
+              alt="Mechanic at work"
+              className="rounded-lg shadow-md object-cover w-full h-64"
+            />
+            <img
+              src="https://images.pexels.com/photos/1104/workshop.jpg"
+              alt="Service center interior"
+              className="rounded-lg shadow-md object-cover w-full h-64"
+            />
+            <img
+              src="https://images.pexels.com/photos/1105/customer-care.jpg"
+              alt="Customer interaction"
+              className="rounded-lg shadow-md object-cover w-full h-64"
+            />
+          </div> */}
         </div>
       </section>
 
